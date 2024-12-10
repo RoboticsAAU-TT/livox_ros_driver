@@ -209,6 +209,7 @@ target_include_directories(${PROJECT_NAME}_node
     ${PCL_INCLUDE_DIRS}
     ${APR_INCLUDE_DIRS}
     livox_ros_driver
+	utils
     )
 
 #---------------------------------------------------------------------------------------

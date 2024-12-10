@@ -23,13 +23,13 @@ public:
 
     unsigned char* points_ptr = &points_msg.data.data();
     for (int i = 0; i < points_msg.width; i++) {
-      livox_msg.points[i].x = *reinterpret_cast<float*>(points_ptr + points_msg.fields[0].offset);
-      livox_msg.points[i].y = *reinterpret_cast<float*>(points_ptr + points_msg.fields[1].offset);
-      livox_msg.points[i].z = *reinterpret_cast<float*>(points_ptr + points_msg.fields[2].offset);
-      livox_msg.points[i].offset_time = *reinterpret_cast<std::uint32_t*>(points_ptr + points_msg.fields[3].offset);
-      livox_msg.points[i].reflectivity = *reinterpret_cast<float*>(points_ptr + points_msg.fields[4].offset);
-      livox_msg.points[i].tag = *reinterpret_cast<std::uint8_t*>(points_ptr + points_msg.fields[5].offset);
-      livox_msg.points[i].line = *reinterpret_cast<std::uint8_t*>(points_ptr + points_msg.fields[6].offset);
+      livox_msg->points[i].x = *reinterpret_cast<float*>(points_ptr + points_msg.fields[0].offset);
+      livox_msg->points[i].y = *reinterpret_cast<float*>(points_ptr + points_msg.fields[1].offset);
+      livox_msg->points[i].z = *reinterpret_cast<float*>(points_ptr + points_msg.fields[2].offset);
+      livox_msg->points[i].offset_time = *reinterpret_cast<std::uint32_t*>(points_ptr + points_msg.fields[3].offset);
+      livox_msg->points[i].reflectivity = *reinterpret_cast<float*>(points_ptr + points_msg.fields[4].offset);
+      livox_msg->points[i].tag = *reinterpret_cast<std::uint8_t*>(points_ptr + points_msg.fields[5].offset);
+      livox_msg->points[i].line = *reinterpret_cast<std::uint8_t*>(points_ptr + points_msg.fields[6].offset);
 
       points_ptr += points_msg.point_step;
     }

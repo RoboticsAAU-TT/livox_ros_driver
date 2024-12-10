@@ -4,7 +4,7 @@
 #include <sensor_msgs/PointCloud2.h>
 #include <livox_ros_driver/CustomMsg.h>
 
-#include <utils/converters/livox_converter.hpp>
+#include <livox_converter.h>
 
 namespace livox_to_pointcloud2 {
 
