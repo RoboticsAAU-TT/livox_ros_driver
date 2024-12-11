@@ -4,9 +4,9 @@
 #include <sensor_msgs/PointCloud2.h>
 #include <livox_ros_driver/CustomMsg.h>
 
-#include <livox_converter.h>
+#include <converters/livox_converter.h>
 
-namespace livox_to_pointcloud2 {
+namespace pointcloud2_to_livox {
 
 class PointCloud2ToLivox {
 public:
@@ -32,7 +32,7 @@ private:
 
 int main(int argc, char** argv) {
   ros::init(argc, argv, "pointcloud2_to_livox");
-  livox_to_pointcloud2::PointCloud2ToLivox node;
+  pointcloud2_to_livox::PointCloud2ToLivox node;
   ros::spin();
 
   return 0;
