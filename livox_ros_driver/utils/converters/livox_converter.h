@@ -25,7 +25,7 @@ public:
     livox_msg->points.resize(points_msg.width);
 
     const unsigned char* points_ptr = points_msg.data.data();
-    for (int i = 0; i < points_msg.width; i++) {
+    for (size_t i = 0; i < points_msg.width; i++) {
       livox_msg->points[i].x = *reinterpret_cast<const float*>(points_ptr + points_msg.fields[0].offset);
       livox_msg->points[i].y = *reinterpret_cast<const float*>(points_ptr + points_msg.fields[1].offset);
       livox_msg->points[i].z = *reinterpret_cast<const float*>(points_ptr + points_msg.fields[2].offset);
